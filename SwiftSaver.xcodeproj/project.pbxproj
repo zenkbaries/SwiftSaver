@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C8F0019A2325F761002FE658 /* SwiftSaverView.h in Headers */ = {isa = PBXBuildFile; fileRef = C8F001992325F761002FE658 /* SwiftSaverView.h */; };
-		C8F0019C2325F761002FE658 /* SwiftSaverView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F0019B2325F761002FE658 /* SwiftSaverView.m */; };
+		C8F001A42325F788002FE658 /* SwiftSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F001A32325F788002FE658 /* SwiftSaver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C8F001962325F761002FE658 /* SwiftSaver.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSaver.saver; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8F001992325F761002FE658 /* SwiftSaverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftSaverView.h; sourceTree = "<group>"; };
-		C8F0019B2325F761002FE658 /* SwiftSaverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftSaverView.m; sourceTree = "<group>"; };
 		C8F0019D2325F761002FE658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8F001A32325F788002FE658 /* SwiftSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSaver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,9 +46,8 @@
 		C8F001982325F761002FE658 /* SwiftSaver */ = {
 			isa = PBXGroup;
 			children = (
-				C8F001992325F761002FE658 /* SwiftSaverView.h */,
-				C8F0019B2325F761002FE658 /* SwiftSaverView.m */,
 				C8F0019D2325F761002FE658 /* Info.plist */,
+				C8F001A32325F788002FE658 /* SwiftSaver.swift */,
 			);
 			path = SwiftSaver;
 			sourceTree = "<group>";
@@ -62,7 +59,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8F0019A2325F761002FE658 /* SwiftSaverView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +94,7 @@
 				TargetAttributes = {
 					C8F001952325F761002FE658 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -133,7 +130,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8F0019C2325F761002FE658 /* SwiftSaverView.m in Sources */,
+				C8F001A42325F788002FE658 /* SwiftSaver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +251,21 @@
 		C8F001A12325F761002FE658 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WKQYJ6SQB5;
 				INFOPLIST_FILE = SwiftSaver/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kellyboy.SwiftSaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
@@ -268,13 +273,20 @@
 		C8F001A22325F761002FE658 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = WKQYJ6SQB5;
 				INFOPLIST_FILE = SwiftSaver/Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kellyboy.SwiftSaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;

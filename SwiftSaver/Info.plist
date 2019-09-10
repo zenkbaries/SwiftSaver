@@ -21,6 +21,6 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2019 KellyBoy. All rights reserved.</string>
 	<key>NSPrincipalClass</key>
-	<string>SwiftSaverView</string>
+	<string>Pong.SwiftSaverView</string>
 </dict>
 </plist>
